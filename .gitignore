@@ -1,3 +1,7 @@
 node_modules/
 settings.py
 .env
+*.pyc
+*.map
+.sass-cache/
+htmlcov/

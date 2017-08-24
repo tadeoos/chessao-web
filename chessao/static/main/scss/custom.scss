@@ -1,0 +1,225 @@
+$font-stack: "Alegreya","skolar-1","skolar-2",'Palatino Linotype',Helvetica,sans-serif;
+$primary-color: #437882;
+$body-bg-image: url("/images/kindajean.png");
+$menu-bg-color: #2B803E;
+$menu-bg-image: url(/images/pool_table.png)l;
+$menu-border-color: #116022; // #5B5E5A;
+$menu-nav-button-bg: #116022;
+$link-color: #A94439;
+$link-hoover: #2B803E;
+
+aside {
+    background: $menu-bg-color;
+    // background-image: $menu-bg-image;
+    margin: 40px 12px 12px 30px;
+    height: auto;
+    border-radius: 20px;
+    border: 2px;
+    border-right: 4px;
+    border-bottom: 3px;
+    border-color: $menu-border-color;
+    border-style: solid;
+}
+
+aside div img {
+    border-radius: 2%;
+    border-style: solid;
+    border-color: $menu-border-color;
+    border-width: 1px;
+}
+
+nav > a.btn {
+    background-color: $menu-nav-button-bg;
+    margin: 5px;
+    border-radius: 8px;
+    font-size: 0.65em;
+}
+
+aside > div > ul.social {
+    padding-top: 20px;
+}
+
+article div p a:hover,
+aside nav a:hover {
+    border-bottom-style: solid;
+}
+
+a {
+    color: $link-color;
+
+    &:hover {
+        color: $link-hoover;
+        /*color: #1F5926;*/
+        cursor: pointer;
+        /*border-bottom-style: solid;*/
+    }
+
+    &.btn {
+        font-size: 0.6em;
+        line-height: 0.8;
+        color: #fff;
+        background-color: #5B5E5A;
+
+        &:hover {
+            background-color: #069;
+            color: #fff;
+        }
+    }
+
+    &.simple-footnote {
+        font-size: smaller;
+
+        &:hover {
+            border-bottom-style: none;
+        }
+    }
+}
+
+article > header > h1 {
+    margin-top: 40px;
+}
+
+aside > div > nav {
+    margin-top: 1em;
+}
+
+audio {
+    background-color: #b8bdba;
+    width: 0;
+}
+
+body {
+    background-color: $primary-color;
+    background-image: $body-bg-image;
+    min-width: 100%;
+    min-height: 100%;
+    font-family: $font-stack;
+    line-height: 1.9em;
+}
+
+div.highlight pre {
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 10px;
+    overflow: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Consolas','Inconsolata','Source Code Pro',monospace;
+}
+
+ol.simple-footnotes {
+    margin-bottom: 80px;
+
+    li {
+        line-height: 1.6em;
+        margin-bottom: 10px;
+        font-size: smaller;
+    }
+}
+
+iframe:hover {
+    display: block;
+}
+
+.description {
+    display: none;
+    position: absolute;
+    border: 1px solid #000;
+    width: 500px;
+    height: 400px;
+}
+
+h6 {
+    margin: 30px 0;
+}
+
+hr {
+    /*margin: 25px 0px;*/
+    background-color: #2b7c35;
+    width: 90%;
+    height: 2px;
+}
+
+main {
+    nav {
+        :first-child {
+            border-left: 1px solid #3C3C3C;
+        }
+
+        a {
+            padding: 0 4px;
+            border-right: 1px solid #3C3C3C;
+        }
+    }
+
+    footer,
+    nav {
+        border-color: #2b7c35;
+    }
+
+    article {
+        text-align: justify;
+
+        code {
+            /*font-size: .8em;*/
+            /*white-space: nowrap;*/
+            color: #dcdccc;
+            font-size: 0.8rem;
+            /*display: inline-table;*/
+            -webkit-font-smoothing: antialiased;
+            padding: 2px 4px 1px;
+            background-color: #3f3f3f;
+            overflow-x: auto;
+            border: 1px solid #3f3f3f;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Inconsolata';
+            vertical-align: baseline;
+        }
+
+        h4 {
+            text-align: center;
+            /*text-decoration: underline;*/
+            font-weight: bold;
+        }
+
+        table {
+            float: right;
+            margin-left: 10pt;
+
+            td,
+            th {
+                padding: 8px;
+                line-height: 20px;
+                vertical-align: top;
+                border-top: 1px solid #4c4c4c;
+            }
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.tiptext {
+    color: $link-color;
+    cursor: pointer;
+}
+
+#matbrace ol {
+    counter-reset: level1;
+
+    li {
+        list-style: none;
+        font-size: small;
+        line-height: normal;
+
+        &:before {
+            content: counter(level1) ": ";
+            /*Instead of ". " */
+            counter-increment: level1;
+            font-weight: bold;
+        }
+    }
+}
